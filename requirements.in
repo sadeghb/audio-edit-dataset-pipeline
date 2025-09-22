@@ -1,0 +1,15 @@
+# requirements.in
+torch>=1.13
+torchaudio
+onnxruntime
+silero
+numpy<2.0
+pandas
+matplotlib
+seaborn
+tqdm
+pydub
+librosa
+textgrid
+requests
+PyYAML

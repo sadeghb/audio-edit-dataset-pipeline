@@ -1,0 +1,49 @@
+# config.yaml
+
+# Global flag to enable or disable caching for all pipeline stages.
+# Set to 'true' for faster re-runs during development.
+use_cache: true
+
+# --- Sensitive Information ---
+# API keys should be populated by the user. Do not commit real keys.
+api_keys:
+  deepgram: "YOUR_DEEPGRAM_API_KEY_HERE"
+  elevenlabs: "YOUR_ELEVENLABS_API_KEY_HERE"
+  llm: "YOUR_LLM_PROVIDER_API_KEY_HERE"
+
+# --- Montreal Forced Aligner (MFA) Settings ---
+mfa:
+  # These names are used to look up the pre-trained models.
+  # The actual paths to these models should be configured in the user's
+  # local MFA setup, not hardcoded in this config.
+  dictionary_name: "english_us_arpa"
+  acoustic_model_name: "english_us_arpa"
+  num_jobs: 4
+
+# --- Audio Editing Parameters ---
+# Settings for the AudioEditorService to generate 'unnatural' cuts.
+editing:
+  backward_phoneme_invasion_factor: [0.7, 0.9]
+  forward_phoneme_invasion_factor: [0.7, 0.9]
+  context_duration_ms: 500
+
+# --- File and Directory Naming ---
+# Defines relative paths for caching intermediate pipeline results.
+cache_paths:
+  vad: "cache/vad"
+  split_points: "cache/split_points"
+  audio_chunks: "cache/audio_chunks"
+  scribe: "cache/scribe"
+  mfa: "cache/mfa"
+  llm: "cache/llm"
+
+# Defines the name of the final output directory for the generated dataset.
+output_for_eval: "output_mfa_nat_unnat"
+
+# Defines the suffixes for various output files.
+output_files:
+  vad_timestamps_suffix: "_vad_timestamps.csv"
+  split_points_suffix: "_split_points.csv"
+  scribe_timestamps_suffix: "_scribe_transcript.json"
+  llm_marked_transcript_suffix: "_marked_transcript.txt"
+  mfa_aligned_suffix: "_mfa_aligned.json"

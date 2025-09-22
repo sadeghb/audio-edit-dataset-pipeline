@@ -1,0 +1,173 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib60/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django specific logs and settings
+# *.log # Covered by general *.log below
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask specific
+instance/
+.webassets-cache
+
+# Scrapy specific
+.scrapy
+
+# Sphinx documentation builds
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IPython general
+profile_default/
+ipython_config.py
+
+# PEP 582; __pypackages__ directory
+__pypackages__/
+
+# Celery schedule and PID files
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath specific
+.sage.py
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project files
+.spyderproject
+.spyproject
+
+# Rope project files
+.ropeproject
+
+# mkdocs documentation site
+/site/
+
+# mypy cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Visual Studio Code settings specific to a user or workspace,
+# but allow committing shared/recommended settings.
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# *.code-workspace # Uncomment if you want to ignore workspace files too
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db # Windows thumbnail cache
+Thumbs.db  # Windows thumbnail cache
+
+# --- Project-Specific Ignores ---
+
+# Configuration file containing secrets.
+# It's recommended to commit a template file (e.g., config.example.yaml)
+# and instruct users to create their own config.yaml from it.
+
+# Log files and directories
+*.log
+logs/
+
+# --- Data, Cache, and Output Directories ---
+
+# Ignore large input data by default.
+# To include a specific example file for the repository,
+# add an exception like: !data/input_audio/sample.wav
+audio_inputs/
+
+# Ignore all generated dataset files.
+output_data/
+
+# Ignore all cached API and MFA results.
+cache/
+
+# Ignore temporary directories created by the MFA aligner.
+mfa_temp_corpus*/
+
+# Misc
+build/
+dist/
